@@ -15,4 +15,11 @@ export class PackageService {
 
   }
 
+  postPackages(packages){
+  	console.log("sent package with value", packages)
+    this.restangular.all('package').post(packages)
+    
+
+  }
+
 }

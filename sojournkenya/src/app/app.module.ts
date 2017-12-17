@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 //import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {MatButtonModule, MatCheckboxModule, MatCardModule, MatIconModule, MatCard} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
 
 
@@ -47,7 +47,7 @@ import { AdminNewPackageComponent } from './admin-new-package/admin-new-package.
     FormsModule,
     ReactiveFormsModule,
     RestangularModule.forRoot(RestangularConfigFactory),
-    MatCardModule, MatIconModule, MatButtonModule, MatDialogModule
+    MatCardModule, MatIconModule, MatButtonModule, MatDialogModule, MatToolbarModule
 
   ],
   entryComponents:[

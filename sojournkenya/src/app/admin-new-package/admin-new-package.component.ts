@@ -1,5 +1,8 @@
 import { Component, OnInit , Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Package} from '../shared/admin-package'
+import {PackageService} from '../services/package.service'
 
 
 @Component({
@@ -9,14 +12,32 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class AdminNewPackageComponent implements OnInit {
 
+  package: Package [];
+  packageCopy = null;
+  packageForm: FormGroup
+
   constructor(public dialogRef: MatDialogRef<AdminNewPackageComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, private fb: FormBuilder ,private packageService : PackageService) {  this.createForm()}
+
+  createForm(){
+    console.log("form created");
+    this.packageForm = this.fb.group({
+      Title: '',
+      MenuLink:'',
+      Image:'',
+      Description:'',
+      Price:''
+    })
+  }
 
   ngOnInit() {
   }
 
   onSubmit(){
-  	this.dialogRef.close();
+    console.log("saved ", this.packageForm.value)
+  this.packageService.postPackages(this.packageForm.value)
+  this.dialogRef.close()
+
   }
 
 }
