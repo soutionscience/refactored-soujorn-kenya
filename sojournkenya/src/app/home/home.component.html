@@ -1,0 +1,44 @@
+<div class="mycontainer">
+  Home/
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Holiday Trips
+        <p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <!-- inside card -->
+        <div class="columns">
+          <div class="column is-one-third" *ngFor ="let pack of package">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="assets/images/{{pack.Image}}" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{pack.Title}}</p>
+                    <p class="subtitle is-6">{{pack.MenuLink}}</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">Read More</a>
+                <a href="#" class="card-footer-item">Book now</a>
+              </footer>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <footer class="card-footer">
+    </footer>
+  </div>
+</div>

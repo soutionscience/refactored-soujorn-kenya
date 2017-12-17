@@ -1,0 +1,28 @@
+<div class="mycontainer">
+  <h4> Packages</h4>
+  <div class="columns">
+    <div class="column is-3">
+            <mat-card>
+               <div class="mymenu" *ngFor="let pack of packages " (click)= "onSelect(pack)" [class.is-success]="pack===selected">
+        <button type="button" class="button is-primary is-small" >{{pack.MenuLink}}</button>
+      </div>  
+      <button class="button is-primary">
+        <mat-icon (click)="addPackages()">playlist_add</mat-icon> 
+      </button>
+           
+             
+           
+
+
+       </mat-card>
+
+
+ 
+
+    </div>
+
+    <div class="column">
+    <app-admin-package-detail [selected] ="selectedOne"></app-admin-package-detail>
+    </div>
+  </div>
+</div>
