@@ -29,7 +29,8 @@ import {RestangularConfigFactory} from './shared/rest-config';
 // services
 import{ PackageService} from './services/package.service';
 import { AdminNewPackageComponent } from './admin-new-package/admin-new-package.component';
-import { PackagesComponent } from './packages/packages.component'
+import { PackagesComponent } from './packages/packages.component';
+import { FileUploadComponent } from './file-upload/file-upload.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PackagesComponent } from './packages/packages.component'
     AdminComponent,
     AdminPackageDetailComponent,
     AdminNewPackageComponent,
-    PackagesComponent
+    PackagesComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
