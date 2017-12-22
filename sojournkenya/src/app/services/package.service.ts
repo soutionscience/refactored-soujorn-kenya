@@ -18,8 +18,19 @@ export class PackageService {
   postPackages(packages){
   	console.log("sent package with value", packages)
     this.restangular.all('package').post(packages)
-    
+
 
   }
+  featuredPackages():Observable<Package[]>{
+    return this.restangular.all('package').getList({Featured: "true"})
+    .map(packages=>packages)
+  }
+
+
+  deletePackage(id: number){
+    this.restangular.one('package', id).remove()
+  }
+
+
 
 }

@@ -24,3 +24,10 @@ exports.delete = function(req, res, next){
 		res.json(resp)
 	})
 }
+
+exports.deleteOne = function(req, res, next){
+	Package.findByIdAndRemove(req.params.packageId, function(err, resp){
+		if(err) throw err;
+		res.json(resp)
+	})
+}

@@ -24,6 +24,7 @@ export class AdminNewPackageComponent implements OnInit {
     this.packageForm = this.fb.group({
       Title: '',
       MenuLink:'',
+      Featured: false,
       Image:'',
       Description:'',
       Price:''
@@ -37,6 +38,8 @@ export class AdminNewPackageComponent implements OnInit {
     console.log("saved ", this.packageForm.value)
   this.packageService.postPackages(this.packageForm.value)
   this.dialogRef.close()
+ // location.reload();
+  
 
   }
 

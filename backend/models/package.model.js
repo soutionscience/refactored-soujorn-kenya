@@ -15,6 +15,7 @@ var packages = new Schema({
     Title: String,
     Image: String,
     MenuLink: String,
+    Featured: Boolean,
     Descripion: String,
     Days: [day],
     Price: Number,

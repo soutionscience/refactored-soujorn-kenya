@@ -3,8 +3,9 @@
   <div class="columns">
     <div class="column is-3">
             <mat-card>
-               <div class="mymenu" *ngFor="let pack of packages " (click)= "onSelect(pack)" [class.is-success]="pack===selected">
-        <button type="button" class="button is-primary is-small" >{{pack.MenuLink}}</button>
+            
+        <div class="mymenu" *ngFor="let pack of packages" (click)= "onSelect(pack)" [class.is-success]="pack===selected">
+        <button type="button" class="button is-primary is-small" [ngClass]="{clicked: selected}">{{pack.MenuLink}}</button>
       </div>  
       <button class="button is-primary">
         <mat-icon (click)="addPackages()">playlist_add</mat-icon> 

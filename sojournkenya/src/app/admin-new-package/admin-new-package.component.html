@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="packageForm" (ngSubmit)="onSubmit()">
 <mat-card>
-	<mat-toolbar color="primary">
+	<mat-toolbar>
   <mat-toolbar-row>
     <span> <h1 class="title">Add Packages</h1></span>
     <span class="spacer"></span>
@@ -12,6 +12,8 @@
 </mat-toolbar>
 
 <div class="field">
+  <p>{{packageForm.values | json}}
+    </p>
   <label class="label">Title</label>
   <div class="control">
     <input mdInput formControlName="Title" class="input" type="text" placeholder="Input Title">
@@ -64,7 +66,9 @@
 <div class="field">
   <div class="control">
     <label class="checkbox">
-      <input type="checkbox">
+      <input
+       mdInput formControlName ="Featured"
+        type="checkbox">
      Set as featured to appear in front page
     </label>
   </div>

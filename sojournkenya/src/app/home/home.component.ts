@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
 getPackages(){
-	return this.packageService.getPackages().subscribe(pack=> this.package = pack)
+	return this.packageService.featuredPackages().subscribe(pack=> this.package = pack)
 
 }
 

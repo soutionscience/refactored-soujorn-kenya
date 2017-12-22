@@ -8,5 +8,7 @@ router.route('/')
 .post(controller.post)
 .delete(controller.delete)
 
+router.route('/:packageId')
+.delete(controller.deleteOne)
 
 module.exports = router;

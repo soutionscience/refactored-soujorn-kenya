@@ -31,9 +31,13 @@ export class AdminComponent implements OnInit {
   onSelect(pack:Package): void{
  this.selectedOne = pack;
   }
+  deletePackage(id: number){
+    this.packageService.deletePackage(id)
+
+  }
 
   addPackages(){
-        this.dialog.open(AdminNewPackageComponent, {width: '700px' , height: '450px', position: {top: '-50%', left: '20%'} })
+        this.dialog.open(AdminNewPackageComponent, {width: '700px' , height: '450px' })
 
   }
 
