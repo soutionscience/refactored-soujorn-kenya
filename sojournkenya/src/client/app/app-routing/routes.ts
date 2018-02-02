@@ -7,12 +7,16 @@ import {PackagesComponent} from '../packages/packages.component'
 import {FileUploadComponent} from '../file-upload/file-upload.component';
 
 export const routes: Routes =[
-{ path: 'home', component: HomeComponent},
-{ path: 'contactus', component: ContactComponent},
-{path:'admin', component: AdminComponent},
+{ path: 'home', 
+  loadChildren: './website.module#WebsiteModule'
+},
+
+{path:'admin', 
+loadChildren: './admin-area.module#AdminAreaModule'
+},
 {path: 'packages' , component: PackagesComponent},
 {path: 'upload', component: FileUploadComponent},
 {
-	path: '', redirectTo: '/home', pathMatch: 'full'
+	path: '', redirectTo: 'home', pathMatch: 'full'
 }
 ]

@@ -16,13 +16,10 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 //import 'hammerjs';
-import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
-import { AdminComponent } from './admin/admin.component';
-import { AdminPackageDetailComponent } from './admin-package-detail/admin-package-detail.component'
 
 import {RestangularModule, Restangular} from 'ngx-restangular';
 import {RestangularConfigFactory} from './shared/rest-config';
@@ -36,11 +33,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component'
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ContactComponent,
     HeaderComponent,
-    AdminComponent,
-    AdminPackageDetailComponent,
     AdminNewPackageComponent,
     PackagesComponent,
     FileUploadComponent
