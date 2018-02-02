@@ -1,0 +1,11 @@
+[{
+    "username": "Admin",
+    "admin": true,
+    "password":"chelski36"
+},
+{
+ "username":"user",
+ "admin":false,
+ "password":"password"
+}
+]
